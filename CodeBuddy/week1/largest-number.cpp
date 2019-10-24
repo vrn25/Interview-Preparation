@@ -17,27 +17,3 @@ string Solution::largestNumber(const vector<int> &A) {
         ans += v[i];
     return ans;
 }
-
-
-int Solution::jump(vector<int> &A) {
-    int n = A.size();
-    vector<int>v(n);
-    v[n-1] = 0;
-    for(int i=n-2;i>=0;i--){
-        int mini = v[i+1];
-        int flag = 0;
-        for(int j=i+1;j<=min(i+A[i],n-1);j++){
-            flag = 1;
-            if(v[j]<mini)
-                mini = v[j];
-        }
-        if(!flag)
-            v[i] = 50001;
-        else
-            v[i] = mini+1;
-    }
-    if(v[0]>50000)
-        return -1;
-    else
-        return v[0];
-}
