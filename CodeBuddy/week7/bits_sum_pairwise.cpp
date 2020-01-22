@@ -1,3 +1,4 @@
+/* Problem: https://www.interviewbit.com/problems/different-bits-sum-pairwise/ */
 int Solution::cntBits(vector<int> &A) {
     long long count = 0;
     long long M = 1000000007;
