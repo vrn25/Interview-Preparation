@@ -1,6 +1,6 @@
 // https://www.interviewbit.com/problems/longest-palindromic-substring/
 
-//  TC: O(n*n), SC: O(1) Solution:
+//  TC: O(n*n), SC: O(1) Solution, Status: Accepted:
 string Solution::longestPalindrome(string A) {
     int n = A.size();
     int ptr1 = 0, ptr2 = 0;
